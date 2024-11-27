@@ -24,3 +24,8 @@ export interface JobList {
   jobs: Job[];
   onFilterSelect: (filter: string) => void;
 }
+
+export interface JobCard {
+  job: Job;
+  onFilterSelect: (filter: string) => void;
+}

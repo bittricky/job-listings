@@ -4,6 +4,7 @@ import { Job } from "@/types/global";
 import RootLayout from "@/app/layout";
 import { Header } from "@/components";
 import { fetchJobs } from "@/utils/fetchJobs";
+import JobList from "@/app/jobs/page";
 
 const Page: React.FC = async () => {
   const jobs: Job[] = await fetchJobs();
@@ -18,7 +19,7 @@ const Page: React.FC = async () => {
         />
       </div>
       <main className="container mx-auto px-4 max-w-5xl">
-        {/* TODO: Add Job List */}
+        <JobList jobs={jobs} onFilterSelect={() => {}} />
       </main>
     </RootLayout>
   );

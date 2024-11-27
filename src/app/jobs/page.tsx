@@ -2,13 +2,14 @@
 
 import React from "react";
 
+import { JobCard } from "@/components";
 import { JobList as JobListProps } from "@/types/global";
 
 const JobList: React.FC<JobListProps> = ({ jobs, onFilterSelect }) => {
   return (
-    <div>
+    <div className="space-y-6">
       {jobs.map((job) => (
-        // TODO: add Job Card component
+        <JobCard key={job.id} job={job} onFilterSelect={onFilterSelect} />
       ))}
     </div>
   );
