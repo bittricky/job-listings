@@ -1,9 +1,9 @@
 import React from "react";
 
 import RootLayout from "@/app/layout";
-import Header from "@/components/Header";
+import { Header } from "@/components";
 
-const App: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <RootLayout>
       <div className="min-h-screen bg-muted">
@@ -20,4 +20,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Page;

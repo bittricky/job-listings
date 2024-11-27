@@ -19,3 +19,8 @@ export interface HeaderProps {
   onRemoveFilters: (filter: string) => void;
   onClearFilters: () => void;
 }
+
+export interface JobList {
+  jobs: Job[];
+  onFilterSelect: (filter: string) => void;
+}
