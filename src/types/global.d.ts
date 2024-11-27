@@ -45,3 +45,8 @@ export interface FilterTags {
   filters: string[];
   onFilterSelect: (filter: string) => void;
 }
+
+export interface FilterTag {
+  label: string;
+  onRemove: () => void;
+}

@@ -3,6 +3,7 @@
 import React from "react";
 import { useFilterContext } from "@/context/FilterContext";
 import { cn } from "@/utils/mergeClassNames";
+import { FilterTag } from "@/components";
 
 const Header: React.FC = () => {
   const { filters, removeFilter, clearFilters } = useFilterContext();
@@ -22,15 +23,12 @@ const Header: React.FC = () => {
         >
           <div className="flex items-center justify-between">
             <div className="flex flex-wrap gap-2">
-              {/* TODO: Add filter tags component */}
               {filters.map((filter) => (
-                <span
+                <FilterTag
                   key={filter}
-                  className="px-3 py-1 bg-muted text-foreground rounded-full cursor-pointer"
-                  onClick={() => removeFilter(filter)}
-                >
-                  {filter}
-                </span>
+                  label={filter}
+                  onRemove={() => removeFilter(filter)}
+                />
               ))}
             </div>
             <button
