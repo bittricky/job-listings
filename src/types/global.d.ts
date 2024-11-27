@@ -34,3 +34,9 @@ export interface JobBadge {
   isNew: boolean;
   isFeatured: boolean;
 }
+
+export interface JobInfo {
+  postedAt: string;
+  contract: string;
+  location: string;
+}
