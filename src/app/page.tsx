@@ -13,10 +13,10 @@ const Page: React.FC = async () => {
     <RootLayout>
       <div className="min-h-screen bg-muted">
         <Header />
+        <main className="container mx-auto px-4 max-w-5xl">
+          <JobList jobs={jobs} />
+        </main>
       </div>
-      <main className="container mx-auto px-4 max-w-5xl">
-        <JobList jobs={jobs} />
-      </main>
     </RootLayout>
   );
 };
