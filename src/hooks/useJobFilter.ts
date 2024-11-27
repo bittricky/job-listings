@@ -7,14 +7,11 @@ export const useJobFilters = (jobs: Job[]) => {
   const filteredJobs = useMemo(() => {
     if (filters.length === 0) return jobs;
 
-    return jobs.filter(
-      (job) => {
-        const jobTags = [job.role, job.level, ...job.languages, ...job.tools];
-        return filters.every((filter) => jobTags.includes(filter));
-      },
-      [filters, jobs]
-    );
-  });
+    return jobs.filter((job) => {
+      const jobTags = [job.role, job.level, ...job.languages, ...job.tools];
+      return filters.every((filter) => jobTags.includes(filter));
+    });
+  }, [filter, jobs]);
 
   const addFilter = (filter: string) => {
     if (!filters.includes(filter)) {
