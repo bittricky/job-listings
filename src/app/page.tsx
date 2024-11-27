@@ -12,14 +12,10 @@ const Page: React.FC = async () => {
   return (
     <RootLayout>
       <div className="min-h-screen bg-muted">
-        <Header
-          filters={[]}
-          onRemoveFilters={() => {}}
-          onClearFilters={() => {}}
-        />
+        <Header />
       </div>
       <main className="container mx-auto px-4 max-w-5xl">
-        <JobList jobs={jobs} onFilterSelect={() => {}} />
+        <JobList jobs={jobs} />
       </main>
     </RootLayout>
   );

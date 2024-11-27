@@ -1,13 +1,10 @@
 import React from "react";
+import { useFilterContext } from "@/context/FilterContext";
 import { cn } from "@/utils/mergeClassNames";
 
-import { HeaderProps } from "@/types/global";
+const Header: React.FC = () => {
+  const { filters, removeFilter, clearFilters } = useFilterContext();
 
-const Header: React.FC<HeaderProps> = ({
-  filters,
-  onRemoveFilters,
-  onClearFilters,
-}) => {
   if (filters.length === 0) {
     return <header className="h-32 bg-accent mb-8" />;
   }
@@ -23,10 +20,19 @@ const Header: React.FC<HeaderProps> = ({
         >
           <div className="flex items-center justify-between">
             <div className="flex flex-wrap gap-2">
-              {/* TODO: Add filter tags */}
+              {/* TODO: Add filter tags component */}
+              {filters.map((filter) => (
+                <span
+                  key={filter}
+                  className="px-3 py-1 bg-muted text-foreground rounded-full cursor-pointer"
+                  onClick={() => removeFilter(filter)}
+                >
+                  {filter}
+                </span>
+              ))}
             </div>
             <button
-              onClick={onClearFilters}
+              onClick={clearFilters}
               className={cn(
                 "text-muted-foreground hover:text-accent",
                 "font-medium transition-colors"

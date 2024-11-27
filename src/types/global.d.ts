@@ -14,15 +14,15 @@ export interface Job {
   tools: string[];
 }
 
-export interface HeaderProps {
+export interface FilterContextType {
   filters: string[];
-  onRemoveFilters: (filter: string) => void;
-  onClearFilters: () => void;
+  addFilter: (filter: string) => void;
+  removeFilter: (filter: string) => void;
+  clearFilters: () => void;
 }
 
 export interface JobList {
   jobs: Job[];
-  onFilterSelect: (filter: string) => void;
 }
 
 export interface JobCard {
