@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Listing
 
-## Getting Started
+> Job listing application built with Next.js that displays a list of jobs with the option to filter the list
 
-First, run the development server:
+## Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Clone the Repository
+
+```sh
+git clone <repostitory_url>
+cd job-listings
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Prerequisites
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Ensure you have the following installed on your system
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js: ver. 14.x or newer
+- npm(Node Package Manager) or Yarn
 
-## Learn More
+Once you have these system dependencies installed, run the following to install the necessary packages.
 
-To learn more about Next.js, take a look at the following resources:
+```
+$ npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+or
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+$ pnpm install
+```
 
-## Deploy on Vercel
+### Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+$ npm run dev
+```
+
+or
+
+```
+$ pnpm run dev
+```
+
+This will start the server on [port 3000](https://localhost:3000). Open this url in your browser to view the application.
+
+### Production
+
+To create a production build of the application:
+
+```
+$ npm run build
+```
+
+or
+
+```
+$ pnpm run build
+```
+
+After the build completes, you can start the production server by running:
+
+```
+$ npm run start
+```
+
+or
+
+```
+$ pnpm run start
+```
+
+---
+
+Project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
