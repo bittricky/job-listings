@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { useFilterContext } from "@/context/FilterContext";
 import { cn } from "@/utils/mergeClassNames";
