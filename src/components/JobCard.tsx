@@ -2,7 +2,7 @@ import React from "react";
 
 import { cn } from "@/utils/mergeClassNames";
 import { JobCard as JobCardProps } from "@/types/global";
-import { JobBadge, JobInfo } from "@/components";
+import { FilterTags, JobBadge, JobInfo } from "@/components";
 
 const JobCard: React.FC<JobCardProps> = ({ job, onFilterSelect }) => {
   const filters = [job.role, job.level, ...job.languages, ...job.tools];
@@ -52,7 +52,7 @@ const JobCard: React.FC<JobCardProps> = ({ job, onFilterSelect }) => {
           />
         </div>
       </div>
-      {/* TODO: Add Filter Tag Component */}
+      <FilterTags filters={filters} onFilterSelect={onFilterSelect} />
     </div>
   );
 };

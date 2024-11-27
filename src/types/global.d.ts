@@ -40,3 +40,8 @@ export interface JobInfo {
   contract: string;
   location: string;
 }
+
+export interface FilterTags {
+  filters: string[];
+  onFilterSelect: (filter: string) => void;
+}
