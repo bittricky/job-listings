@@ -13,3 +13,9 @@ export interface Job {
   languages: string[];
   tools: string[];
 }
+
+export interface HeaderProps {
+  filters: string[];
+  onRemoveFilters: (filter: string) => void;
+  onClearFilters: () => void;
+}
