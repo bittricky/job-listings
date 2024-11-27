@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --primary: 187 75% 64%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 187 75% 64%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --border: 214.3 31.8% 91.4%;
-    --radius: 0.5rem;
+    --background: 270 50% 95%; /* Light purple background */
+    --foreground: 270 55% 25%; /* Deep purple foreground */
+    --primary: 270 65% 50%; /* Vibrant purple */
+    --primary-foreground: 270 70% 95%; /* Light purple text on primary */
+    --secondary: 270 40% 85%; /* Softer purple for secondary elements */
+    --secondary-foreground: 270 55% 20%; /* Dark purple for contrast */
+    --muted: 270 30% 90%; /* Muted purple */
+    --muted-foreground: 270 20% 50%; /* Subtle purple for muted elements */
+    --accent: 270 70% 60%; /* Accent purple */
+    --accent-foreground: 270 60% 95%; /* Light purple on accent */
+    --border: 270 30% 80%; /* Light purple border */
+    --radius: 0.5rem; /* Retained border radius */
   }
 }
