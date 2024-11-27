@@ -2,6 +2,7 @@ import React from "react";
 
 import { cn } from "@/utils/mergeClassNames";
 import { JobCard as JobCardProps } from "@/types/global";
+import { JobBadge } from "@/components";
 
 const JobCard: React.FC<JobCardProps> = ({ job, onFilterSelect }) => {
   const filters = [job.role, job.level, ...job.languages, ...job.tools];
@@ -32,7 +33,7 @@ const JobCard: React.FC<JobCardProps> = ({ job, onFilterSelect }) => {
           <div className="flex items-center gap-2 mb-2">
             <span className="text-accent font-semibold">{job.company}</span>
             <div className="flex gap-2">
-              {/* TODO: add Job Badge component */}
+              <JobBadge isNew={job.new} isFeatured={job.featured} />
             </div>
           </div>
           <h2

@@ -29,3 +29,8 @@ export interface JobCard {
   job: Job;
   onFilterSelect: (filter: string) => void;
 }
+
+export interface JobBadge {
+  isNew: boolean;
+  isFeatured: boolean;
+}
